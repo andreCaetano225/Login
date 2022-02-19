@@ -1,48 +1,25 @@
-import { Button, Flex, FormLabel, HStack, Input, Stack, VStack } from '@chakra-ui/react'
-import type { NextPage } from 'next'
+import { Box, Button, Flex, FormLabel, HStack, Input, Stack, Text, VStack } from '@chakra-ui/react';
+import type { NextPage } from 'next';
+import { FormCep } from './components/FormCep';
+import { HeaderApp } from './components/HeaderApp';
+
 
 
 
 const Home: NextPage = () => {
   return (
-    <Flex 
-      alignItems={'center'}
-      justify={'center'}
-      w={'100vw'}
-      h={'100vh'}
-    >
+    <>
+      <HeaderApp />
       <Flex
-      as="form"
-      bg={'red.700'}
-      maxWidth={360}
-      p={8}
-      borderRadius={8}
-      flexDir={'column'}
+        alignItems={'center'}
+        justify={'center'}
+        w={'99vw'}
+        h={'100vh'}
+        marginTop={'-300px'}
       >
-      <Stack spacing={3}>
-        <div>
-      <FormLabel htmlFor='email'>E-mail</FormLabel>
-        <Input
-          type={'email'}
-          id='email'
-          name='email'
-          size={'lg'}
-        />
-        </div>
-        <div>
-
-        <FormLabel htmlFor='password'>Senha</FormLabel>
-        <Input
-          type={'password'}
-          id='password'
-          name='password'
-          size={'lg'}
-          />
-        </div>
-        </Stack>
-        <Button mt={5} colorScheme={'blue'} size={'lg'} type='submit'>Entrar</Button>
+        <FormCep />
       </Flex>
-    </Flex>
+    </>
   )
 }
 
